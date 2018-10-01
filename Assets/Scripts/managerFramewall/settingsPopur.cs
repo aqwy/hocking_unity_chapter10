@@ -26,19 +26,17 @@ public class settingsPopur : MonoBehaviour
         Managers.theaudio.soundMute = !Managers.theaudio.soundMute;
         Managers.theaudio.playSound(sound);
     }
+    public void OnMusicToggle()
+    {
+        Managers.theaudio.musicMute = !Managers.theaudio.musicMute;
+        Managers.theaudio.playSound(sound);
+    }
     public void OnSoundValue(float volume)
     {
         Managers.theaudio.soundVolume = volume;
     }
-    // Use this for initialization
-    void Start()
+    public void OnMusicValue(float volume)
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        Managers.theaudio.musicVolume = volume;
     }
 }

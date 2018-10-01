@@ -16,6 +16,13 @@ public class Managers : MonoBehaviour
     public static imagesManager imgManeg { get; private set; }*/
     public static audioManager theaudio { get; private set; }
     private List<IGameManager> startSequnce;
+    private float theMusicVolume;
+    public float musicVolume
+    {
+        get { return theMusicVolume; }
+        set { musicVolume = value; }
+    }
+
     void Awake()
     {
         theaudio = GetComponent<audioManager>();
